@@ -1,0 +1,181 @@
+/* Container styles */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #053672, #34abcd);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main application styles */
+.todo-apli {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field styles */
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Row styles */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+.row input {
+    flex: 1 1 auto; /* Allow input to grow and shrink */
+    margin-right: 10px; /* Space between input and button */
+}
+
+.row .btn {
+    flex: 0 0 auto; /* Button should not shrink */
+}
+
+/* Heading styles */
+.todo-apli h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.todo-apli h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Button styles */
+.btn {
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    background: #ff5045;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* List item styles */
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none; /* Add this line */
+}
+
+ul li.checked {
+    text-decoration: line-through; /* Add this line */
+}
+
+/* List item icons */
+ul li::before {
+    content: ' ';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('./../../Assets/Image/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked::before {
+    background-image: url('./../../Assets/Image/checked.png'); /* Change this to the checked image */
+}
+
+/* Button styles for other buttons */
+.btn1 {
+    border: none;
+    outline: none;
+    padding: 6px 10px;
+    background: #053672;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+/* Div display style */
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ensure mobile responsiveness */
+@media (max-width: 768px) {
+    .todo-apli {
+        padding: 20px;
+        margin: 50px auto 20px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .btn1 {
+        margin-left: 10px;
+    }
+
+    .row {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .row input {
+        margin: 0 0 10px 0; /* Adjust margin for vertical stacking */
+        width: 100%; /* Full width input */
+    }
+
+    .row .btn {
+        width: 100%; /* Full width button */
+    }
+}
