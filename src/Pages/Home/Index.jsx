@@ -47,22 +47,15 @@ function TodoList() {
         </div>
         <ul id="list-container">
           {todos.map((todo, index) => (
-            <li
-              key={index}
-              onClick={() => handleToggleTodo(index)}
-              className={todo.checked ? 'checked' : ''}
-            >
-              {todo.text}
-              <button
-                className='btn1'
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleDeleteTodo(index);
-                }}
-              >
+            <li key={index} onClick={() => handleToggleTodo(index)} className={todo.checked ? 'checked' : ''}>
+            <span>{todo.text}</span>
+            <button className='btn1' onClick={(e) => {
+                e.stopPropagation();
+                handleDeleteTodo(index);
+            }}>
                 x
-              </button>
-            </li>
+            </button>
+        </li>        
           ))}
         </ul>
       </div>

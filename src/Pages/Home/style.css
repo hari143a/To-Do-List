@@ -92,11 +92,11 @@ ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-decoration: none; /* Add this line */
+    text-decoration: none; /* Ensure no decoration on entire li */
 }
 
-ul li.checked {
-    text-decoration: line-through; /* Add this line */
+ul li.checked span {
+    text-decoration: line-through; /* Apply line-through only to the span inside checked li */
 }
 
 /* List item icons */
@@ -130,6 +130,7 @@ ul li.checked::before {
     border-radius: 20px;
     margin-left: 10px;
 }
+
 
 /* Div display style */
 div {
